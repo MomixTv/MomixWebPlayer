@@ -29,8 +29,8 @@
 
 <body>
   <div id="jwplayerDiv"></div>
+  <img src="https://www.appcreator24.com/srv/imgs/seccs/30175830_ico.png?ts=1708503568" alt="Your Image" style="width: 100%; height: auto;">
   <script type="text/javascript">
-    // Function to get URL parameters
     function getUrlParameter(name) {
       name = name.replace(/[\[\]]/g, "\\$&");
       var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
@@ -39,13 +39,11 @@
       if (!results[2]) return '';
       return decodeURIComponent(results[2].replace(/\+/g, " "));
     }
-
-    // Get the value of the 'm3u' parameter from the URL
+    
     var m3uUrl = getUrlParameter('m3u');
 
-    // Setup JWPlayer with the m3u URL
     jwplayer("jwplayerDiv").setup({
-      file: m3uUrl, // Use the value obtained from the URL parameter
+      file: m3uUrl, 
       position: 'bottom',
       autostart: true,
       stretching: "",
