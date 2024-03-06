@@ -7,7 +7,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>MOMIXTV</title>
+  <title>MOMIXTV WEB PLAYER</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="//content.jwplatform.com/libraries/SAHhwvZq.js"></script>
@@ -29,7 +29,6 @@
 
 <body>
   <div id="jwplayerDiv"></div>
-  <img src="https://www.appcreator24.com/srv/imgs/seccs/30175830_ico.png?ts=1708503568" alt="Your Image" style="width: 100%; height: auto;">
   <script type="text/javascript">
     function getUrlParameter(name) {
       name = name.replace(/[\[\]]/g, "\\$&");
@@ -39,12 +38,13 @@
       if (!results[2]) return '';
       return decodeURIComponent(results[2].replace(/\+/g, " "));
     }
-    
+
     var m3uUrl = getUrlParameter('m3u');
 
     jwplayer("jwplayerDiv").setup({
       file: m3uUrl, 
       position: 'bottom',
+      autostart: true,
       stretching: "",
       width: "100%",
       type: "hls",
